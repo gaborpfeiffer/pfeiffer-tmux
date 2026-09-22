@@ -34,7 +34,7 @@
 
       # 2x2 elrendezes felepitese pane_id alapon (index-fuggetlen)
       first=$(tmux -f "$CONF" new-session -d -s "$SESSION" -P -F '#{pane_id}')
-      bottom=$(tmux split-window -v -l 25% -t "$first" -P -F '#{pane_id}')  # also sor 25% -> kisebb
+      bottom=$(tmux split-window -v -l 10% -t "$first" -P -F '#{pane_id}')  # also sor 10% -> kisebb
       tmux split-window -h -l 50% -t "$first"     # felso sor ket felre
       tmux split-window -h -l 50% -t "$bottom"    # also sor ket felre
       tmux select-pane -t "$first"
