@@ -11,6 +11,9 @@
     set -g history-limit 10000
     set -sg escape-time 10
     set -g default-terminal "tmux-256color"
+    # truecolor (24-bites RGB) atengedese, kulonben a finom szinek torzulnak
+    set -as terminal-features ",*:RGB"
+    set -ga terminal-overrides ",*256col*:Tc"
 
     # opcionalis prefix-alapu panelnavigacio (az eger mellett)
     bind h select-pane -L

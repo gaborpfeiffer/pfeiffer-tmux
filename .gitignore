@@ -1,3 +1,6 @@
 result
 result-*
 .direnv/
+
+# helyi kepernyokepek / segedfajlok
+*.png
